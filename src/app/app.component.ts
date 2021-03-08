@@ -35,6 +35,8 @@ export class AppComponent implements OnInit {
 
   isDisabled = false;
 
+  nbPersons = 1;
+
   ngOnInit(): void {
     setTimeout(
       () => {
@@ -56,6 +58,14 @@ export class AppComponent implements OnInit {
 
   seeMore() {
     alert('Plus');
+  }
+
+  addPerson() {
+    this.nbPersons = this.nbPersons + 1;
+  }
+
+  substractPerson() {
+    this.nbPersons--;
   }
 
 }

@@ -22,9 +22,9 @@
 </div>
 <div>
   Nombre de personnes :
-  <button>-</button>
-  4
-  <button>+</button>
+  <button (click)="substractPerson()">-</button>
+  {{ nbPersons }}
+  <button (click)="nbPersons = nbPersons + 1">+</button>
 </div>
 <div>
   Prix total : 160 €
