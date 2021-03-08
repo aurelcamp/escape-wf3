@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'Bienvenue dans escape';
   nbClassicsRooms = 4;
   nbVirtualRooms = 5;
+  ageMin = 12;
+  ageMax = 120;
 
   lastLi() {
     console.log('lastLi');
