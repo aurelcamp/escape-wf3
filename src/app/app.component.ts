@@ -54,4 +54,8 @@ export class AppComponent implements OnInit {
     return 'Un amusement garanti';
   }
 
+  seeMore() {
+    alert('Plus');
+  }
+
 }
