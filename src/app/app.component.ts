@@ -36,6 +36,8 @@ export class AppComponent implements OnInit {
   isDisabled = false;
 
   nbPersons = 1;
+  totalPrice = 160;
+  priceByPerson = this.totalPrice / this.nbPersons;
 
   ngOnInit(): void {
     setTimeout(
@@ -62,10 +64,12 @@ export class AppComponent implements OnInit {
 
   addPerson() {
     this.nbPersons = this.nbPersons + 1;
+    this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
   }
 
   substractPerson() {
     this.nbPersons--;
+    this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
   }
 
 }

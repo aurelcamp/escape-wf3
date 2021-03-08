@@ -24,13 +24,13 @@
   Nombre de personnes :
   <button (click)="substractPerson()">-</button>
   {{ nbPersons }}
-  <button (click)="nbPersons = nbPersons + 1">+</button>
+  <button (click)="addPerson()">+</button>
 </div>
 <div>
-  Prix total : 160 €
+  Prix total : {{ totalPrice }} €
 </div>
 <div>
-  Prix par personne : 40 €
+  Prix par personne : {{ priceByPerson }} €
 </div>
 <div>
   <button>Réserver</button>
