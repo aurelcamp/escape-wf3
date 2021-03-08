@@ -33,6 +33,8 @@ export class AppComponent implements OnInit {
 
   selectedImageSlide: ImageSlide = this.image1;
 
+  isDisabled = false;
+
   ngOnInit(): void {
     setTimeout(
       () => {
