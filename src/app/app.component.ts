@@ -72,4 +72,8 @@ export class AppComponent implements OnInit {
     this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
   }
 
+  checkReduction(val: string) {
+    console.log(val);
+  }
+
 }
