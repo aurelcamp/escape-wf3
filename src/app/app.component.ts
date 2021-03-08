@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'Bienvenue dans escape';
+  nbClassicsRooms = 4;
+  nbVirtualRooms = 5;
 
 }

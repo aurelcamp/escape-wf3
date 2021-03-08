@@ -1,8 +1,8 @@
 {{ title }}
 
 <ul>
-  <li>- 3 salles clasiques</li>
-  <li>- 2 salles de réalité virtuelle,</li>
-  <li>- Soit 5 salles</li>
-  <li>- Soit 300 minutes de recherche</li>
+  <li>- {{ nbClassicsRooms }} salles clasiques</li>
+  <li>- {{ nbVirtualRooms }} salles de réalité virtuelle,</li>
+  <li>- Soit {{ nbClassicsRooms + nbVirtualRooms }} salles</li>
+  <li>- Soit {{ (nbClassicsRooms + nbVirtualRooms) * 60 }} minutes de recherche</li>
 </ul>
