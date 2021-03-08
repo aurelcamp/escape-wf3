@@ -13,17 +13,23 @@ export class AppComponent implements OnInit {
   ageMin = 12;
   ageMax = 120;
 
+  imageUrl = './assets/images/escape1.jpg';
+
   ngOnInit(): void {
     setTimeout(
       () => {
-        console.log('timeout fini');
         this.title = 'Saurez-vous sortir vivant ?';
       }, 5000
+    );
+
+    setTimeout(
+      () => {
+        this.imageUrl = './assets/images/escape2.jpg';
+      }, 3000
     );
   }
 
   lastLi() {
-    console.log('lastLi');
     return 'Un amusement garanti';
   }
 
