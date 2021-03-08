@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   ngOnInit(): void {
-    
+    setTimeout(
+      () => {
+        console.log('timeout fini');
+      }
+    );
   }
 
   title = 'Bienvenue dans escape';
