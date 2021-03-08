@@ -1,6 +1,9 @@
 <h1>{{ title }}</h1>
 
-<img class="background-img" [src]="imageUrl" alt="image escape 1">
+<div>
+  {{ selectedImageSlide.title }}
+  <img class="background-img" [src]="selectedImageSlide.url" [alt]="selectedImageSlide.alt" [title]="selectedImageSlide.title">
+</div>
 
 <ul>
   <li>- {{ nbClassicsRooms }} salles clasiques</li>
