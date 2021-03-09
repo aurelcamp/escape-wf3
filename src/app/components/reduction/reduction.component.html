@@ -16,10 +16,14 @@
 </div>
 <div>
   Nombre de personnes :
-  <app-choice-nb></app-choice-nb>
+  <app-choice-nb [nbPersons]="nbPersons"></app-choice-nb>
 </div>
 <div>
   Code réduction : <input type="text" #reductionInput (keyup)="checkReduction(reductionInput.value)">
+</div>
+
+<div>
+  {{ nbPersons }}
 </div>
 
 <div>
