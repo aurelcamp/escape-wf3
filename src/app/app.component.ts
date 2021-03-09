@@ -13,15 +13,7 @@ export class AppComponent implements OnInit {
   ageMin = 12;
   ageMax = 120;
 
-  name = 'Paul';
-  roomNumber = 2;
-
   isDisabled = false;
-
-  nbPersons = 1;
-  initialPrice = 160;
-  totalPrice = this.initialPrice;
-  priceByPerson = this.totalPrice / this.nbPersons;
 
   ngOnInit(): void {
     setTimeout(
@@ -38,34 +30,6 @@ export class AppComponent implements OnInit {
 
   seeMore() {
     alert('Plus');
-  }
-
-  addPerson() {
-    this.nbPersons = this.nbPersons + 1;
-    this.calculatePriceByPerson();
-  }
-
-  substractPerson() {
-    this.nbPersons--;
-    this.calculatePriceByPerson();
-  }
-
-  checkReduction(val: string) {
-    console.log(val);
-    if (val === 'REDUC') {
-      this.totalPrice = 0.7 * this.initialPrice;
-    } else {
-      this.totalPrice = this.initialPrice;
-    }
-    this.calculatePriceByPerson();
-  }
-
-  calculatePriceByPerson() {
-    this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
-  }
-
-  reserve() {
-    console.log(this.roomNumber);
   }
 
 }

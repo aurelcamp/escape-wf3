@@ -13,38 +13,4 @@
 
 <button type="button" [hidden]="isDisabled" (click)="seeMore()">Voir plus</button>
 
-<h2>Réservation</h2>
-<div>
-  <!-- Les deux lignes ce dessous sont équivalentes -->
-  <!-- Votre nom <input type="text" [value]="name" (keyup)="name = nameInput.value" #nameInput> -->
 
-  <!-- Ne pas oublier d'importer le FormsModule dans app.module.ts -->
-  Votre nom <input type="text" [(ngModel)]="name">
-</div>
-<div>
-  Choisir la salle 
-  <select [(ngModel)]="roomNumber">
-    <option value="1">La salle 1</option>
-    <option value="2">La salle 2</option>
-    <option value="3">La salle 3</option>
-  </select>
-</div>
-<div>
-  Nombre de personnes :
-  <button (click)="substractPerson()">-</button>
-  {{ nbPersons }}
-  <button (click)="addPerson()">+</button>
-</div>
-<div>
-  Code réduction : <input type="text" #reductionInput (keyup)="checkReduction(reductionInput.value)">
-</div>
-
-<div>
-  Prix total : {{ totalPrice }} €
-</div>
-<div>
-  Prix par personne : {{ priceByPerson }} €
-</div>
-<div>
-  <button (click)="reserve()">Réserver</button>
-</div>

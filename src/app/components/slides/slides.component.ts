@@ -13,6 +13,7 @@ interface ImageSlide {
 })
 export class SlidesComponent implements OnInit {
 
+  
   image1: ImageSlide = {
     url: './assets/images/escape1.jpg',
     alt: 'image escape 1',
