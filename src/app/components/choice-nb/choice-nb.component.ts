@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ChoiceNbComponent implements OnInit {
 
   @Input() nb = 3;
+  @Input() min = 1;
+  @Input() max!: number;
 
   constructor() { }
 
