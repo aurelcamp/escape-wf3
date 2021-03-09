@@ -46,6 +46,7 @@ export class ReductionComponent implements OnInit {
 
   nbModified(numb: number) {
     this.nbPersons = numb;
+    this.calculatePriceByPerson();
   }
 
 }
