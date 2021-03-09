@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-choice-nb',
@@ -10,6 +10,8 @@ export class ChoiceNbComponent implements OnInit {
   @Input() nb = 3;
   @Input() min = 1;
   @Input() max!: number;
+
+  @Output() testEvent = new EventEmitter();
 
   constructor() { }
 

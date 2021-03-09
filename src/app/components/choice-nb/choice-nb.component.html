@@ -1,3 +1,5 @@
 <button (click)="substractPerson()" [disabled]="nb <= min">-</button>
   {{ nb }}
 <button (click)="addPerson()" [disabled]="nb >= max">+</button>
+
+<button (click)="testEvent.emit('Bla Bla')">Test</button>
