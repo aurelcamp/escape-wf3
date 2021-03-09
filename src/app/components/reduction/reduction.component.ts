@@ -40,4 +40,8 @@ export class ReductionComponent implements OnInit {
     console.log(this.roomNumber);
   }
 
+  test(evt: any) {
+    console.log(evt);
+  }
+
 }
