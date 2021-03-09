@@ -36,7 +36,8 @@ export class AppComponent implements OnInit {
   isDisabled = false;
 
   nbPersons = 1;
-  totalPrice = 160;
+  initialPrice = 160;
+  totalPrice = this.initialPrice;
   priceByPerson = this.totalPrice / this.nbPersons;
 
   ngOnInit(): void {
@@ -74,6 +75,11 @@ export class AppComponent implements OnInit {
 
   checkReduction(val: string) {
     console.log(val);
+    if (val === 'REDUC') {
+      this.totalPrice = 0.7 * this.initialPrice;
+    } else {
+      this.totalPrice = this.initialPrice;
+    }
   }
 
 }
