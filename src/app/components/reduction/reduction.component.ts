@@ -15,6 +15,8 @@ export class ReductionComponent implements OnInit {
   totalPrice = this.initialPrice;
   priceByPerson = this.totalPrice / this.nbPersons;
 
+  maxNbPersons = 8;
+
   constructor() { }
 
   ngOnInit(): void {
