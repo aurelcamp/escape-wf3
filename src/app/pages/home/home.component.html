@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h1>{{ title }}</h1>
+
+<app-slides></app-slides>
+
+<ul>
+  <li>- {{ nbClassicsRooms }} salles clasiques</li>
+  <li>- {{ nbVirtualRooms }} salles de réalité virtuelle,</li>
+  <li>- Soit {{ nbClassicsRooms + nbVirtualRooms }} salles</li>
+  <li>- Soit {{ (nbClassicsRooms + nbVirtualRooms) * 60 }} minutes de recherche</li>
+  <li>{{ lastLi() }}</li>
+  <li>De {{ ageMin }} à {{ ageMax }} ans</li>
+</ul>
+
+<button type="button" [hidden]="isDisabled" (click)="seeMore()">Voir plus</button>
+
+<app-reduction></app-reduction>
