@@ -12,6 +12,7 @@ export class ChoiceNbComponent implements OnInit {
   @Input() max!: number;
 
   @Output() testEvent = new EventEmitter();
+  @Output() nbModify = new EventEmitter();
 
   constructor() { }
 
@@ -20,6 +21,7 @@ export class ChoiceNbComponent implements OnInit {
 
   addPerson() {
     this.nb = this.nb + 1;
+    this.nbModify.emit(this.nb);
   }
 
   substractPerson() {

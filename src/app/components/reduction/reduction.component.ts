@@ -44,4 +44,8 @@ export class ReductionComponent implements OnInit {
     console.log(evt);
   }
 
+  nbModified(numb: number) {
+    this.nbPersons = numb;
+  }
+
 }
