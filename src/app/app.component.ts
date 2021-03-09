@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   ageMin = 12;
   ageMax = 120;
 
+  name = 'Paul';
+
   image1: ImageSlide = {
     url: './assets/images/escape1.jpg',
     alt: 'image escape 1',
@@ -85,6 +87,10 @@ export class AppComponent implements OnInit {
 
   calculatePriceByPerson() {
     this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
+  }
+
+  reserve() {
+    console.log(this.name);
   }
 
 }

@@ -18,7 +18,7 @@
 
 <h2>Réservation</h2>
 <div>
-  Votre nom <input type="text">
+  Votre nom <input type="text" [value]="name" (keyup)="name = nameInput.value" #nameInput>
 </div>
 <div>
   Nombre de personnes :
@@ -36,5 +36,5 @@
   Prix par personne : {{ priceByPerson }} €
 </div>
 <div>
-  <button>Réserver</button>
+  <button (click)="reserve()">Réserver</button>
 </div>
