@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-interface ImageSlide {
-  url: string;
-  alt: string;
-  title: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,20 +16,6 @@ export class AppComponent implements OnInit {
   name = 'Paul';
   roomNumber = 2;
 
-  image1: ImageSlide = {
-    url: './assets/images/escape1.jpg',
-    alt: 'image escape 1',
-    title: 'Une immersion parfaite',
-  }
-
-  image2: ImageSlide = {
-    url: './assets/images/escape2.jpg',
-    alt: 'image escape 2',
-    title: 'Pour tous les niveaux',
-  }
-
-  selectedImageSlide: ImageSlide = this.image1;
-
   isDisabled = false;
 
   nbPersons = 1;
@@ -48,13 +28,7 @@ export class AppComponent implements OnInit {
       () => {
         this.title = 'Saurez-vous sortir vivant ?';
       }, 5000
-    );
-
-    setTimeout(
-      () => {
-        this.selectedImageSlide = this.image2;
-      }, 3000
-    );    
+    );  
 
   }
 
