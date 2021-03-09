@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { SlidesComponent } from './components/slides/slides.component';
 import { ReductionComponent } from './components/reduction/reduction.component';
 import { ChoiceNbComponent } from './components/choice-nb/choice-nb.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlidesComponent,
     ReductionComponent,
-    ChoiceNbComponent
+    ChoiceNbComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
