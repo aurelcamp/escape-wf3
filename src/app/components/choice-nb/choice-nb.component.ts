@@ -26,6 +26,7 @@ export class ChoiceNbComponent implements OnInit {
 
   substractPerson() {
     this.nb--;
+    this.nbModify.emit(this.nb);
   }
 
 }
