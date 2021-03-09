@@ -65,12 +65,12 @@ export class AppComponent implements OnInit {
 
   addPerson() {
     this.nbPersons = this.nbPersons + 1;
-    this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
+    this.calculatePriceByPerson();
   }
 
   substractPerson() {
     this.nbPersons--;
-    this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
+    this.calculatePriceByPerson();
   }
 
   checkReduction(val: string) {
@@ -80,6 +80,11 @@ export class AppComponent implements OnInit {
     } else {
       this.totalPrice = this.initialPrice;
     }
+    this.calculatePriceByPerson();
+  }
+
+  calculatePriceByPerson() {
+    this.priceByPerson = Math.floor(this.totalPrice / this.nbPersons);
   }
 
 }
