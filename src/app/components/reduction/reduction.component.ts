@@ -20,17 +20,6 @@ export class ReductionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  addPerson() {
-    this.nbPersons = this.nbPersons + 1;
-    this.calculatePriceByPerson();
-  }
-
-  substractPerson() {
-    this.nbPersons--;
-    this.calculatePriceByPerson();
-  }
-
   checkReduction(val: string) {
     console.log(val);
     if (val === 'REDUC') {
