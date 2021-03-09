@@ -18,7 +18,11 @@
 
 <h2>Réservation</h2>
 <div>
-  Votre nom <input type="text" [value]="name" (keyup)="name = nameInput.value" #nameInput>
+  <!-- Les deux lignes ce dessous sont équivalentes -->
+  <!-- Votre nom <input type="text" [value]="name" (keyup)="name = nameInput.value" #nameInput> -->
+
+  <!-- Ne pas oublier d'importer le FormsModule dans app.module.ts -->
+  Votre nom <input type="text" [(ngModel)]="name">
 </div>
 <div>
   Nombre de personnes :
