@@ -10,7 +10,7 @@ export class ReductionComponent implements OnInit {
   name = 'Paul';
   roomNumber = 2;
 
-  nbPersons = 1;
+  nbPersons = 2;
   initialPrice = 160;
   totalPrice = this.initialPrice;
   priceByPerson = this.totalPrice / this.nbPersons;
