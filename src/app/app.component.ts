@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   ageMax = 120;
 
   name = 'Paul';
+  roomNumber = 2;
 
   image1: ImageSlide = {
     url: './assets/images/escape1.jpg',
@@ -90,7 +91,7 @@ export class AppComponent implements OnInit {
   }
 
   reserve() {
-    console.log(this.name);
+    console.log(this.roomNumber);
   }
 
 }
