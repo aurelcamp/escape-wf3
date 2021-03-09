@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChoiceNbComponent implements OnInit {
 
-  @Input() nbPersons = 3;
+  @Input() nb = 3;
 
   constructor() { }
 
@@ -15,11 +15,11 @@ export class ChoiceNbComponent implements OnInit {
   }
 
   addPerson() {
-    this.nbPersons = this.nbPersons + 1;
+    this.nb = this.nb + 1;
   }
 
   substractPerson() {
-    this.nbPersons--;
+    this.nb--;
   }
 
 }
