@@ -6,19 +6,18 @@
     <div class="col-xs-12 col-md-6">
       
       <div class="card">
-        <img src="http://les-combien.com/images/rooms/pirate.jpg" class="card-img-top" alt="...">
+        <img [src]="room.imageUrl" class="card-img-top" [alt]="room.imageAlt">
         <div class="card-body">
     
           <div class="players-container">
-            <div>De 2 à 4</div>
+            <div>De {{ room.nbMin }} à {{ room.nbMax }}</div>
             <div>joueurs</div>
           </div>
     
-          <div class="card-title">Pirate</div>
-          <div class="card-subtitle">Difficulté : 3</div>
+          <div class="card-title">{{ room.title }}</div>
+          <div class="card-subtitle">Difficulté : {{ room.difficulty }}</div>
           <p class="card-text">
-            En tant que jeune mousse, vous devrez visiter le bateau du célèbre pirate Barbe Verte. Saurez-vous découvrir où il a caché le trésor découvert sur l'île Perdue et quitter le navire ? Mais
-            dépêchez-vous les autres pirates vous suspectent et ont décidé de vous enfermer.
+            {{ room.description }}
           </p>
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
