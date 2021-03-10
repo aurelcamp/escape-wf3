@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 class Room {
   title: string;
   imageUrl: string;
+  imageAlt: string;
   nbMin: number;
   nbMax: number;
   difficulty: number;
@@ -20,6 +21,7 @@ export class RoomsComponent implements OnInit {
   room: Room = {
     title: 'Pirate',
     imageUrl: 'http://les-combien.com/images/rooms/pirate.jpg',
+    imageAlt: 'Salle pirate',
     nbMin: 2,
     nbMax: 4,
     difficulty: 3,
