@@ -9,6 +9,7 @@ import { ReductionComponent } from './components/reduction/reduction.component';
 import { ChoiceNbComponent } from './components/choice-nb/choice-nb.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RoomsComponent } from './pages/rooms/rooms.component';
     ReductionComponent,
     ChoiceNbComponent,
     HomeComponent,
-    RoomsComponent
+    RoomsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
