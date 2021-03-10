@@ -26,3 +26,9 @@
 .card.virtual {
   background-color: #eee;
 }
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
