@@ -19,6 +19,9 @@
             [ngClass]="{'text-success' : room.difficulty === 1, 'text-warning' : room.difficulty === 2, 'text-danger' : room.difficulty === 3}">
             Difficulté : {{ room.difficulty }}
           </div>
+          <p>
+            Horaires : <span *ngFor="let time of room.times">{{ time }}</span>
+          </p>
           <button class="btn btn-primary" (click)="toggle()" *ngIf="room.description">
             <span *ngIf="showDescription">Cacher la description</span>
             <span *ngIf="!showDescription">Afficher la description</span>
