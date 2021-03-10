@@ -52,7 +52,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let room of rooms; let idx = index;">
-        <th scope="row">{{ idx }}</th>
+        <th scope="row">{{ idx + 1 }}</th>
         <td>{{ room.title }}</td>
         <td>{{ room.difficulty }}</td>
       </tr>
