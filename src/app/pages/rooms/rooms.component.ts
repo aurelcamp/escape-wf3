@@ -33,7 +33,6 @@ export class RoomsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   toggle() {

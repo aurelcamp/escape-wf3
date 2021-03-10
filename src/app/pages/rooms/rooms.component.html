@@ -16,7 +16,10 @@
     
           <div class="card-title">{{ room.title }}</div>
           <div class="card-subtitle">Difficulté : {{ room.difficulty }}</div>
-          <button class="btn btn-primary" (click)="toggle()" *ngIf="room.description">Voir / Cacher la description</button>
+          <button class="btn btn-primary" (click)="toggle()" *ngIf="room.description">
+            <span *ngIf="showDescription">Cacher la description</span>
+            <span *ngIf="!showDescription">Afficher la description</span>
+          </button>
           <p class="card-text" *ngIf="showDescription">
             {{ room.description }}
           </p>
