@@ -7,7 +7,7 @@ class Room {
   nbMin: number;
   nbMax: number;
   difficulty: number;
-  description: string;
+  description?: string;
 }
 
 @Component({
@@ -33,14 +33,12 @@ export class RoomsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   toggle() {
-    if (this.showDescription === true) {
-      this.showDescription = false;
-    } else {
-      this.showDescription = true;
-    }
+    this.showDescription = !this.showDescription;
+
   }
 
 }
