@@ -20,7 +20,10 @@
             Difficulté : {{ room.difficulty }}
           </div>
           <p>
-            Horaires : <span *ngFor="let time of room.times">{{ time }}</span>
+            Horaires : 
+            <span *ngFor="let time of room.times; let l = last;">
+              {{ time }}<span *ngIf="!l">, </span><span *ngIf="l">.</span> 
+            </span>
           </p>
           <button class="btn btn-primary" (click)="toggle()" *ngIf="room.description">
             <span *ngIf="showDescription">Cacher la description</span>
