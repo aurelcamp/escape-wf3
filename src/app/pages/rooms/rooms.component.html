@@ -17,7 +17,7 @@
           <div class="card-title">{{ room.title }}</div>
           <div class="card-subtitle">Difficulté : {{ room.difficulty }}</div>
           <button class="btn btn-primary">Voir / Cacher la description</button>
-          <p class="card-text">
+          <p class="card-text" *ngIf="showDescription">
             {{ room.description }}
           </p>
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->

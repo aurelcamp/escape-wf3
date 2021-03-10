@@ -28,6 +28,8 @@ export class RoomsComponent implements OnInit {
     dépêchez-vous les autres pirates vous suspectent et ont décidé de vous enfermer.`
   }
 
+  showDescription = true;
+
   constructor() { }
 
   ngOnInit(): void {
