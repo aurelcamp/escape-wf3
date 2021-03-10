@@ -8,6 +8,8 @@ import { setTheme } from 'ngx-bootstrap/utils';
 })
 export class AppComponent {
 
+  isCollapsed = true;
+
   constructor() {
     setTheme('bs4');
   }
