@@ -21,7 +21,7 @@ import { Error404Component } from './pages/error404/error404.component';
     HomeComponent,
     RoomsComponent,
     ContactComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     BrowserModule,
