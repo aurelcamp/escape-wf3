@@ -35,4 +35,12 @@ export class RoomsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggle() {
+    if (this.showDescription === true) {
+      this.showDescription = false;
+    } else {
+      this.showDescription = true;
+    }
+  }
+
 }
