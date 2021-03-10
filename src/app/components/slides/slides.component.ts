@@ -34,6 +34,7 @@ export class SlidesComponent implements OnInit {
     setTimeout(
       () => {
         this.selectedImageSlide = this.image2;
+
       }, 3000
     );    
   }
