@@ -24,7 +24,7 @@ export class RoomsComponent implements OnInit {
     imageAlt: 'Salle pirate',
     nbMin: 2,
     nbMax: 4,
-    difficulty: 2,
+    difficulty: 3,
     description: `En tant que jeune mousse, vous devrez visiter le bateau du célèbre pirate Barbe Verte. Saurez-vous découvrir où il a caché le trésor découvert sur l'île Perdue et quitter le navire ? Mais
     dépêchez-vous les autres pirates vous suspectent et ont décidé de vous enfermer.`,
     isVirtual: false,
