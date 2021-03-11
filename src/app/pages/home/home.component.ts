@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomService } from 'src/app/services/room.service';
 import { Room } from '../rooms/rooms.component';
 
 @Component({
@@ -16,44 +17,21 @@ export class HomeComponent implements OnInit {
 
   isDisabled = false;
 
-  rooms: Room[] = [
-    {
-	    id: 1,
-      title: 'Pirate',
-      description: `En temps que jeune mousse, vous devrez visiter le bateau du célèbre pirate Barbe Verte. Saurez-vous découvrir où
-        il a caché le trésor découvert sur l'île Perdue et quitter le navire ? Mais
-        dépêchez-vous les autres pirates vous suspectent
-        et ont décidé de vous enfermer.`,
-      imageUrl: 'http://les-combien.com/images/rooms/pirate.jpg',
-      imageAlt: 'Escape room pirate',
-      times: ['12h30', '17h00', '21h00'],
-      nbMin: 2,
-      nbMax: 4,
-      difficulty: 3,
-      isVirtual: false,
-    },
-    {
-	    id: 2,
-      title: `La conquête spatiale `,
-      description: `A l'intérieur d'une navette reconstruite à l'identique, vous devrez découvrir la source de l'avarie responsable
-        de la perte de contrôle de la navette spatiale ? Vous ne disposerez que d'une heure pour résoudre le problème et éviter le crash
-        de votre navette.`,
-      imageUrl: 'http://les-combien.com/images/rooms/space.jpg',
-      imageAlt: 'Escape room espace',
-      times: ['8h30', '12h00'],
-      nbMin: 3,
-      nbMax: 6,
-      difficulty: 2,
-      isVirtual: true,
-    },
-  ];
+  rooms: Room[] = [];
+
+  constructor(
+    public roomService: RoomService
+  ) {}
 
   ngOnInit(): void {
     setTimeout(
       () => {
         this.title = 'Saurez-vous sortir vivant ?';
       }, 5000
-    );  
+    );
+
+    let allRooms = this.roomService.getRooms();
+    this.rooms = [allRooms[0], allRooms[2]];
 
   }
 
