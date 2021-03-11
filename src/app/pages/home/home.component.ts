@@ -46,42 +46,6 @@ export class HomeComponent implements OnInit {
       difficulty: 2,
       isVirtual: true,
     },
-    {
-	    id: 3,
-      title: `Le pharaon`,
-      description: `Jeunes archéologues vous vous trouvez à l'intérieur d'une pyramide égyptienne. Votre objectif : parvenir à découvrir
-      la salle secrète qui renferme le tombeau d'un très ancien pharaon. Mais méfiez-vous de la malédiction.`,
-      imageUrl: 'http://les-combien.com/images/rooms/egypt.jpg',
-      imageAlt: 'Escape room pharaon',
-      times: ['16h00', '18h00'],
-      nbMin: 4,
-      nbMax: 4,
-      difficulty: 1,
-      isVirtual: true,
-    },
-    {
-	    id: 4,
-      title: 'Chevaliers',
-      imageUrl: 'http://les-combien.com/images/rooms/knight.jpg',
-      imageAlt: 'Escape room chevalier',
-      times: ['10h00', '20h00'],
-      nbMin: 2,
-      nbMax: 6,
-      difficulty: 3,
-      isVirtual: false,
-    },
-    {
-	    id: 5,
-      title: 'Prison',
-      description: `Vous êtes enfermés dans une prison et devez vous échappez le plus rapidement possible`,
-      imageUrl: 'https://aurelcamp.fr/escape/api/images/rooms/jail.jpg',
-      imageAlt: 'Escape room prison',
-      times: ['14h00', '15h30', '17h00', '18h30'],
-      nbMin: 2,
-      nbMax: 3,
-      difficulty: 1,
-      isVirtual: false,
-    }
   ];
 
   ngOnInit(): void {
