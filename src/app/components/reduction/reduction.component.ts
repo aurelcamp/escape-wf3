@@ -24,6 +24,8 @@ export class ReductionComponent implements OnInit {
 
   ngOnInit(): void {
     this.initialPrice = this.discountService.calculatePrice();
+    this.totalPrice = this.initialPrice;
+    this.priceByPerson = this.totalPrice / this.nbPersons;
   }
 
   checkReduction(val: string) {
