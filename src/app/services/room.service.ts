@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Room } from '../pages/rooms/rooms.component';
 
@@ -74,9 +75,12 @@ export class RoomService {
     }
   ];
 
-  constructor() { }
+  constructor(
+    public http: HttpClient
+  ) { }
 
-  getRooms() {
-    return this.rooms;
+  async getRooms() {
+    const data = await this.http.get<Room[]>('http://api.les-combien.com/api/open/rooms').toPromise();
+    return data;
   }
 }

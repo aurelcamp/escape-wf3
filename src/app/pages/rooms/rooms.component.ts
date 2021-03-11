@@ -30,9 +30,8 @@ export class RoomsComponent implements OnInit {
     public roomService: RoomService,
   ) { }
 
-  ngOnInit(): void {
-    this.rooms = this.roomService.getRooms();
+  async ngOnInit(): Promise<void> {
+    this.rooms = await this.roomService.getRooms();
   }
-
 
 }

@@ -23,14 +23,14 @@ export class HomeComponent implements OnInit {
     public roomService: RoomService
   ) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     setTimeout(
       () => {
         this.title = 'Saurez-vous sortir vivant ?';
       }, 5000
     );
 
-    let allRooms = this.roomService.getRooms();
+    let allRooms = await this.roomService.getRooms();
     this.rooms = [allRooms[0], allRooms[2]];
 
   }
