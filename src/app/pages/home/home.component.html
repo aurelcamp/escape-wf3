@@ -16,8 +16,19 @@
   
   <app-reduction></app-reduction>
 
-  <!-- <h2>Les meilleures salles</h2> -->
+  <h2>Les meilleures salles</h2>
 
+  <div class="row">
+
+    <ng-container *ngFor="let room of rooms">
+      <div class="col-xs-12 col-md-6 mb-3">
+      
+        <app-card [room]="room"></app-card>
+        
+      </div>
+    </ng-container>
+    
+  </div>
   
 
 </div>
