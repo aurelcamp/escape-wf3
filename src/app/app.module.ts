@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { RoomsComponent } from './pages/rooms/rooms.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { CardComponent } from './components/card/card.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { CardComponent } from './components/card/card.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
