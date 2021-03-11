@@ -11,10 +11,10 @@ export class DiscountService {
     const date = new Date();
     const day = date.getDay();
     let price = 0; 
-    if (day >= 1 && day <=5) {
-      price = 160;
+    if (day >= 1 && day <=3) {
+      price = 170;
     } else {
-      price = 200;
+      price = 220;
     }
     return price;
   }
