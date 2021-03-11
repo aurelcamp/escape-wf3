@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DiscountService } from 'src/app/services/discount.service';
 
 @Component({
   selector: 'app-reduction',
@@ -11,15 +12,18 @@ export class ReductionComponent implements OnInit {
   roomNumber = 2;
 
   nbPersons = 2;
-  initialPrice = 160;
+  initialPrice = 10;
   totalPrice = this.initialPrice;
   priceByPerson = this.totalPrice / this.nbPersons;
 
   maxNbPersons = 8;
 
-  constructor() { }
+  constructor(
+    public discountService: DiscountService
+  ) { }
 
   ngOnInit(): void {
+    this.initialPrice = this.discountService.calculatePrice();
   }
 
   checkReduction(val: string) {
