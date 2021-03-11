@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-class Room {
+export class Room {
   id: number;
   title: string;
   imageUrl: string;
