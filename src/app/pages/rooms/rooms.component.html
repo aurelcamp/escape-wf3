@@ -1,6 +1,17 @@
 <div class="container">
   <h1>Les salles</h1>
 
+  <p>
+    Difficulté min : 
+    
+    <!-- Les deux lignes du dessous sont équiventes -->
+    <!-- <app-choice-nb [nb]="difficultyMin" [max]="difficultyMax" (nbChange)="difficultyMin = $event"></app-choice-nb> -->
+    <app-choice-nb [(nb)]="difficultyMin" [max]="difficultyMax"></app-choice-nb>
+  </p>
+
+  <p>
+    {{ difficultyMin }}
+  </p>
 
   <div class="row">
     <div class="col-xs-12 col-md-6 mb-3" *ngFor="let room of rooms">

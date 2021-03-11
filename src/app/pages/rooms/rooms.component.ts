@@ -34,6 +34,9 @@ export class RoomsComponent implements OnInit {
   //   isVirtual: false,
   // }
 
+  difficultyMin = 2;
+  difficultyMax = 3;
+
   rooms: Room[] = [
     {
 	    id: 1,

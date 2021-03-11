@@ -12,7 +12,9 @@ export class ChoiceNbComponent implements OnInit {
   @Input() max!: number;
 
   @Output() testEvent = new EventEmitter();
-  @Output() nbModify = new EventEmitter();
+
+  // Pour avoir le raccourci, if faut terminer le nom de la variable "nb" par "Change" donc "nbChange"
+  @Output() nbChange = new EventEmitter();
 
   constructor() { }
 
@@ -21,12 +23,12 @@ export class ChoiceNbComponent implements OnInit {
 
   addPerson() {
     this.nb = this.nb + 1;
-    this.nbModify.emit(this.nb);
+    this.nbChange.emit(this.nb);
   }
 
   substractPerson() {
     this.nb--;
-    this.nbModify.emit(this.nb);
+    this.nbChange.emit(this.nb);
   }
 
 }

@@ -16,7 +16,7 @@
 </div>
 <div>
   Nombre de personnes :
-  <app-choice-nb [nb]="nbPersons" [max]="maxNbPersons" (testEvent)="test($event)" (nbModify)="nbModified($event)"></app-choice-nb>
+  <app-choice-nb [nb]="nbPersons" [max]="maxNbPersons" (testEvent)="test($event)" (nbChange)="nbModified($event)"></app-choice-nb>
 </div>
 <div>
   Code réduction : <input type="text" #reductionInput (keyup)="checkReduction(reductionInput.value)">
