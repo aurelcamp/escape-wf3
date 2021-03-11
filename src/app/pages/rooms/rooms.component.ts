@@ -105,16 +105,10 @@ export class RoomsComponent implements OnInit {
     }
   ];
 
-  showDescription = true;
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggle() {
-    this.showDescription = !this.showDescription;
-
-  }
 
 }

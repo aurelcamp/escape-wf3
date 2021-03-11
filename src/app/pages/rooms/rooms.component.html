@@ -14,37 +14,7 @@
     <ng-container *ngFor="let room of rooms">
       <div class="col-xs-12 col-md-6 mb-3" *ngIf="room.difficulty >= difficultyMin">
       
-        <div class="card" [ngClass]="{'virtual' : room.isVirtual}">
-          <img [src]="room.imageUrl" class="card-img-top" [alt]="room.imageAlt">
-          <div class="card-body">
-      
-            <div class="players-container">
-              <div *ngIf="room.nbMin !== room.nbMax">De {{ room.nbMin }} à {{ room.nbMax }}</div>
-              <div *ngIf="room.nbMin === room.nbMax">Pour {{ room.nbMin }}</div>
-              <div>joueurs</div>
-            </div>
-      
-            <div class="card-title">{{ room.title }}</div>
-            <div class="card-subtitle"
-              [ngClass]="{'text-success' : room.difficulty === 1, 'text-warning' : room.difficulty === 2, 'text-danger' : room.difficulty === 3}">
-              Difficulté : {{ room.difficulty }}
-            </div>
-            <p>
-              Horaires : 
-              <span *ngFor="let time of room.times; let l = last;">
-                {{ time }}<span *ngIf="!l">, </span><span *ngIf="l">.</span> 
-              </span>
-            </p>
-            <button class="btn btn-primary" (click)="toggle()" *ngIf="room.description">
-              <span *ngIf="showDescription">Cacher la description</span>
-              <span *ngIf="!showDescription">Afficher la description</span>
-            </button>
-            <p class="card-text" *ngIf="showDescription">
-              {{ room.description }}
-            </p>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
-        </div>
+        <app-card [room]="room"></app-card>
         
       </div>
     </ng-container>
